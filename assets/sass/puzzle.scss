@@ -1,0 +1,168 @@
+@import "_rem";
+$row: 4;
+$col: 4;
+$picW: 440;
+$picH: 440;
+$itemW: $picW/$col;
+$itemH: $picH/$row;
+@mixin generatorBgPos($rowIndex:0, $colIndex:0) {
+    background-position: addRemUnit(-$colIndex * $itemH) addRemUnit(-$rowIndex * $itemW);
+}
+html{
+	height: 100%;
+}
+body {
+	box-sizing: border-box;
+	height: 100%;
+	padding-top: 28px/$ppr;
+    background: url(../image/puzzle/bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+a{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+.banner{
+	margin-bottom: 70px/$ppr;
+    text-align: center;
+    &__img{
+		display: inline-block;
+		height: 204px/$ppr;
+		width: 537px/$ppr;
+    }
+}
+.puzzle {
+    position: relative;
+    margin: 0 auto;
+    width: addRemUnit($picW);
+    height: addRemUnit($picH);
+    border: 4px solid rgba(256, 256, 256, .8);
+    &__grid-item {
+        position: absolute;
+        background-color: #fff;
+        &--row {
+            width: 100%;
+            height: 1px;
+        }
+        &--col {
+            width: 1px;
+            height: 100%;
+        }
+    }
+    &__content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    &__item {
+        position: absolute;
+        background-size: addRemUnit($picW) addRemUnit($picH);
+        width: addRemUnit($itemW);
+        height: addRemUnit($itemH);
+        $i: 0;
+        @while $i < $row {
+            $j: 0;
+            @while $j < $col {
+                &[data-row-index="#{$i}"][data-col-index="#{$j}"] {
+                    @include generatorBgPos($i, $j);
+                }
+                $j: $j + 1;
+            }
+            $i: $i + 1;
+        }
+        &--selected{
+        	outline: 1px solid #00dedc;
+        	z-index: 100;
+        }
+    }
+}
+#show-game-rule{
+	color: #fedc3c;
+	&:focus{
+		outline: none;
+	}
+}
+
+.title{
+	text-align: center;
+	font-size: 32px/$ppr;
+	padding: 10px/$ppr 0;
+	color: #fff;
+}
+
+.change-btn{
+	display: block;
+	margin: 28px/$ppr auto 0;
+	width: 324px/$ppr;
+	height: 90px/$ppr;
+	font-size: 36px/$ppr;
+	line-height: 90px/$ppr;
+	background-color: #fedc3c;
+	color: #a91b0d;
+	border-radius: 10px/$ppr;
+	text-align: center;
+	&:active{
+		background-color: #eac100;
+	}
+}
+
+.popup{
+	// box-sizing: border-box;
+	margin: 0 auto;
+	width: 500px/$ppr;
+	height: 500px/$ppr;
+	border: 4px solid #fff;
+	&__img{
+		display: block;
+		height: 100%;
+	}
+}
+
+.rules{
+	position: relative;
+	margin: 0 auto;
+	padding-top: 50px/$ppr;
+	width: 450px/$ppr;
+	height: 550px/$ppr;
+	border-radius: 10px/$ppr;
+	background: #ff6054;
+	box-sizing: border-box;
+	&__decorate{
+		position: absolute;
+		width: 244px/$ppr;
+		height: 181px/$ppr;
+		top: -91px/$ppr;
+		left: 27px/$ppr;
+		background: url(../image/puzzle/rules-decorate.png) no-repeat;
+		background-size: cover;
+	}
+	&__title{
+		position: relative;
+		padding: 10px/$ppr 0 32px/$ppr 0;
+		text-align: center;
+		font-size: 36px/$ppr;
+		margin-bottom: 25px/$ppr;
+		color: #ff6054;
+		background: url(../image/puzzle/ribbon.png) center 0 no-repeat;
+		background-size: 385px/$ppr 73px/$ppr;
+	}
+	&__item{
+		color: #FFF;
+		font-size: 28px/$ppr;
+		line-height: 40px/$ppr;
+		padding: 0 40px/$ppr;
+		margin-bottom: 15px/$ppr;
+	}
+	&__close-btn{
+		display: block;
+		margin: 75px/$ppr auto 0;
+		height: 74px/$ppr;
+		line-height: 74px/$ppr;
+		width: 272px/$ppr;
+		text-align: center;
+		background-color: #fedc3b;
+		color: #aa1a0f;
+		border-radius: 10px/$ppr;
+		font-size: 34px/$ppr;
+		box-shadow: 0 6px/$ppr #e49c00;
+	}
+}

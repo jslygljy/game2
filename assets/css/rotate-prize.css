@@ -1,0 +1,49 @@
+body {
+  height: 100%;
+}
+
+.content {
+  background: url(../image/rotate-prize/bg.png) no-repeat;
+  background-size: 100% 100%;
+  max-width: 640px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.game {
+  position: relative;
+  padding-top: 3.90625rem;
+  width: 8.6875rem;
+  height: 8.6875rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.game__rotate-area {
+  height: 100%;
+  background: url(../image/rotate-prize/rotate-bg.png) no-repeat;
+  background-size: cover;
+}
+.game__rotate-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 2.34375rem;
+  height: 2.875rem;
+  margin-left: -1.17188rem;
+  margin-top: 0.23438rem;
+  background: url(../image/rotate-prize/btn.png) no-repeat;
+  background-size: cover;
+}
+
+.game-describe {
+  padding: 0 0.625rem;
+}
+.game-describe__title {
+  padding: 0.46875rem 0;
+  font-size: 0.5rem;
+  font-weight: bold;
+}
+.game-describe__content {
+  font-size: 0.4375rem;
+  line-height: 1.5em;
+}

@@ -1,0 +1,49 @@
+@import "_rem";
+body {
+	height: 100%;
+}
+.content {
+    background: url(../image/rotate-prize/bg.png) no-repeat;
+    background-size: 100% 100%;
+    max-width: 640px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.game {
+	position: relative;
+    padding-top: 250px/$ppr;
+    width: 556px/$ppr;
+    height: 556px/$ppr;
+    margin: 0 auto;
+    overflow: hidden;
+    &__rotate-area {
+        height: 100%;
+        background: url(../image/rotate-prize/rotate-bg.png) no-repeat;
+        background-size: cover;
+    }
+    &__rotate-btn{
+    	position: absolute;
+    	left: 50%;
+    	top: 50%;
+    	width: 150px/$ppr;
+    	height: 184px/$ppr;
+    	margin-left: -75px/$ppr;
+        margin-top: 15px/$ppr;
+        background: url(../image/rotate-prize/btn.png) no-repeat;
+        background-size: cover;
+    }
+}
+
+.game-describe {
+	padding: 0 40px/$ppr;
+    &__title {
+        padding: 30px/$ppr 0;
+        font-size: 32px/$ppr;
+        font-weight: bold;
+    }
+    &__content {
+        font-size: 28px/$ppr;
+        line-height: 1.5em;
+    }
+}

@@ -1,0 +1,38 @@
+﻿.ui_modal {
+    height: auto;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    width: 30px;
+    height: 30px;
+    display: block;
+    float: right;
+    line-height: 30px;
+    font-size: 16px;
+    color: white;
+    font-weight: 400;
+    font-family: 黑体;
+    display: block;
+}
+
+.ui_alert .content {
+    width: 80%;
+    float: left;
+    margin: 10px 10%;
+    background: none;
+    height: auto;
+    word-break: break-word;
+    text-align: left;
+    font-size: 12px;
+    line-height:20px;
+}
+
+.ui_alert input {
+    width: 70px;
+    height: 30px;
+    margin: auto;
+    background-color: #fc4242;
+    color: white;
+}

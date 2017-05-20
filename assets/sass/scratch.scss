@@ -1,0 +1,35 @@
+@import "_rem";
+body {
+    background-color: rgb(144, 21, 13);
+    font-size: 24px/$ppr;
+}
+
+.game {
+    box-sizing: border-box;
+    height: 610px/$ppr;
+    background: url(../image/scratch/bg.jpg) no-repeat;
+    padding-top: 466px/$ppr;
+    background-size: cover;
+    &__scratch-area {
+        margin: 0 auto;
+        width: 444px/$ppr;
+        height: 75px/$ppr;
+    }
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.game-describe {
+	padding: 0 40px/$ppr;
+    &__title {
+        padding: 30px/$ppr 0;
+        font-size: 32px/$ppr;
+        color: rgb(255, 196, 4);
+    }
+    &__content {
+        font-size: 28px/$ppr;
+        color: #fff;
+        text-indent: 2em;
+        line-height: 1.5em;
+    }
+}
