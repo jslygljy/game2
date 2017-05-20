@@ -35,7 +35,7 @@ function gameinit(prizeArr) {
     }
 
     Puzzle.prototype = {
-        imgBasePath: '../assets/image/puzzle/',
+        imgBasePath: '../image/puzzle/',
         imgs: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg','6.jpg','7.jpg','8.jpg','9.jpg'],
         items: [],
         init: function () {
