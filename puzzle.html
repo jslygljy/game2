@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>拼图</title>
+	<script src="../assets/vendor/caculate-rem.js"></script>
+	<link rel="stylesheet" href="../assets/css/common.css">
+	<link rel="stylesheet" href="../assets/vendor/magnific-popup/main.css">
+	<link rel="stylesheet" href="../assets/css/puzzle.css">
+    <link rel="stylesheet" href="../../../lib/css/sr_mobile.css">
+</head>
+<body>
+    <div class="banner">
+        <img class="banner__img" src="../assets/image/puzzle/title.png" alt=""/>
+    </div>
+    <div class="title game-title-color"><span>国庆节，赢好礼！</span><a href="#game-rule" id="show-game-rule">游戏规则</a></div>
+	<div class="puzzle">
+		<div class="puzzle__content"></div>
+	</div>
+    <div class="game-btn">
+        <a href="javascript:void(0)" class="change-btn">换一张</a>
+        <a href="javascript:void(0)" class="myreward">我的奖品</a>
+    </div>
+
+	<div class="popup-wrap" style="display:none;">
+		<div class="popup">
+			<img src="" class="popup__img">
+		</div>
+		<div class="rules" id="game-rule">
+			<div class="rules__decorate"></div>
+			<h2 class="rules__title">游戏规则</h2>
+			<ol>
+				<li class="rules__item">1.活动日期10.1-10.7，每天12:00-20:00 </li>
+				<li class="rules__item">2.每小时拼图成绩前10位为中大奖 </li>
+				<li class="rules__item">3.每人每天最多中1次大奖第一名</li>
+				<li class="rules__item">4.大奖中奖及兑奖逻辑在线下实现，无须代码实现</li>
+				<li class="rules__item">5.排行榜页面显示2个榜单，即时TOP10排行榜和上一个小时中奖排行榜</li>
+				<li class="rules__item">6.每人每小时可以中一次小奖，这个逻辑和目前中秋拼图相同</li>
+			</ol>
+			<a href="javascript:void(0);" class="rules__close-btn">大展身手</a>
+		</div>
+	</div>
+	<script src="../assets/vendor/jquery.min.js"></script>
+
+    <script src="../../../lib/js/config.js"></script>
+    <script src="../../../lib/js/sr_common.js"></script>
+    <script src="../../../lib/js/sr_mobile.js"></script>
+
+ 
+
+	<script src="../assets/vendor/magnific-popup/main.min.js"></script>
+	<script src="../assets/js/tools.js"></script>
+	<script src="../assets/js/puzzle.js"></script>
+    <script src="../../../lib/js/sr_openapi.js"></script>
+    <script src="../../../lib/js/sr_game.js"></script>
+</body>
+</html>
